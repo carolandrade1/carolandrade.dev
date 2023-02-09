@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['var(--font-ibarra']
+      },
+    },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [],
 }

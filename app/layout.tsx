@@ -1,6 +1,14 @@
 import Navbar from '@/components/navbar'
 import SkipLink from '@/components/skiplink'
+import { Ibarra_Real_Nova } from '@next/font/google'
+import clsx from 'clsx'
 import './globals.css'
+
+const ibarra = Ibarra_Real_Nova({
+  subsets: ['latin'],
+  variable: '--font-ibarra',
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
@@ -8,7 +16,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="text-black bg-white dark:text-white dark:bg-[#111010]">
+    <html lang="en" className={clsx(
+      "text-black bg-white dark:text-white dark:bg-[#111010]", ibarra.className
+    )} >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
