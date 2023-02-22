@@ -3,7 +3,6 @@
 // import clsx from 'clsx';
 // import Link from 'next/link';
 // import { usePathname } from 'next/navigation';
-// import { navLinks } from '@/lib/info';
 import dynamic from 'next/dynamic';
 import { Logo } from './logo';
 
@@ -12,6 +11,17 @@ let myModule = await import('../components/toggleTheme')
 return myModule.ToggleTheme;
 }, { ssr: false });
 
+// const navLinks = {
+//     '/': {
+//         name: 'home'
+//     },
+//     '/projects': {
+//         name: 'projects'
+//     },
+//     '/guestbook': {
+//         name: 'guestbook'
+//     },
+// };
 
 // function LinkItem(isActive:boolean, name: string, path: string) {
 //     return <>

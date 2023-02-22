@@ -1,8 +1,16 @@
+import Link from "next/link"
+import { LogoIcon } from "./icons";
 
-function Logo() {
+export const Logo = () => {
   return (
-    <div>Logo</div>
+    <Link
+    href="/"
+    aria-label="Logo Carol Andrade"
+    title="Home"
+    >
+      <div>
+        <LogoIcon />
+      </div>
+    </Link>
   )
-}
-
-export default Logo
+};
