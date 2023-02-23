@@ -15,8 +15,6 @@ export const info = {
             "description": "Google clone using Next.js and Tailwind",
             "link": "https://google-clone-livid-zeta.vercel.app/pt-BR",
             "buttonText": "See live",
-            "primaryBackground": "bg-violet-400",
-            "secondaryBackground": "from-blue-700 to-blue-700"
         },
         {
             "cardId": "02",
@@ -24,8 +22,6 @@ export const info = {
             "description": "Multiple projects manipulating the DOM",
             "link": "https://carolandrade1.github.io/Javascript_Projects/",
             "buttonText": "See live",
-            "primaryBackground": "bg-violet-500",
-            "secondaryBackground": "from-indigo-700 to-indigo-700"
         },
         {
             "cardId": "03",
@@ -33,8 +29,6 @@ export const info = {
             "description": "10 Modern CSS single-line styling",
             "link": "https://github.com/carolandrade1/Responsive_Layout",
             "buttonText": "See Live",
-            "primaryBackground": "bg-violet-500",
-            "secondaryBackground": "from-indigo-700 to-indigo-700"
         }
     ]
 }
