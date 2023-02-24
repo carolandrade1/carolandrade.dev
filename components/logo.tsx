@@ -1,16 +1,22 @@
 import Link from "next/link"
-import { LogoIcon } from "./icons";
 
 export const Logo = () => {
   return (
     <Link
     href="/"
-    aria-label="Logo Carol Andrade"
+    aria-label="Carol Andrade"
     title="Home"
+    className="flex items-center gap-x-1"
     >
-      <div>
-        <LogoIcon />
-      </div>
+      <span className="pb-2 text-lg">
+        🤖
+      </span>
+      <span>
+        /
+      </span>
+      <h1 className="text-lg">
+        Carol Andrade
+      </h1>
     </Link>
   )
 };

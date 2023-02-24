@@ -45,7 +45,7 @@ export const Navbar = () => {
     // let pathname = usePathname(); 
 
   return (
-    <header className="flex justify-between items-center mb-20">
+    <header className="flex justify-between items-center mb-28">
         <Logo />
 
         <ToggleTheme />
