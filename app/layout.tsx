@@ -1,20 +1,18 @@
 import './globals.css';
 import Script from 'next/script';
-import { Ibarra_Real_Nova } from '@next/font/google';
+import { Inter } from '@next/font/google';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { SkipLink } from '@/components/skiplink';
 
-const ibarra = Ibarra_Real_Nova({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-ibarra',
   display: 'swap',
 })
 
 export const metadata = {
   title: {
     default: 'Carol Santos',
-    template: '%s | Carol Santos',
   },
   description: 'Portfolio',
   generator: 'Next.js',
@@ -25,6 +23,9 @@ export const metadata = {
   colorScheme: 'dark',
   creator: 'Carol Andrade',
   publisher: 'Carol Andrade',
+  icons: {
+      shortcut: 'logoIcon.svg',
+    },
 }
 
 
@@ -47,28 +48,14 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en" >
-
-      <body className="text-[#18181B] bg-white dark:text-white dark:bg-[#18181B] antialiased m-auto max-w-4xl p-6 flex flex-col height">
-        <Script
-          id="data-theme"
-          dangerouslySetInnerHTML={{ __html: setInitialTheme }}
-        />
-
-        {/* <div className="z-[-1] pointer-events-none absolute top-0 left-0 h-72 w-full md:h-80 lg:h-96">
-          <div className="content h-full">
-            <div className="    bg-gradient-to-b from-purple-200 w-full h-full"></div>
-          </div>
-        </div> */}
-
+    <html lang="en" className={inter.className}>
+      <body className="text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
+        <Script id="data-theme" dangerouslySetInnerHTML={{ __html: setInitialTheme }}/>
         <SkipLink />
-
         <Navbar />
-        
-        <main id="main" className="flex-auto min-w-0 md:flex flex-col px-2 md:px-0">
+        <main id="main" className="flex-auto md:mx-16 md:flex flex-col md:px-0">
           {children}
         </main>
-      
         <Footer />
       </body>
     </html>
