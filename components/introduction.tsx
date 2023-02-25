@@ -31,8 +31,12 @@ export function IntroductionSection() {
                     Contact
                 </h3>
                 <div className="flex flex-wrap gap-4">
-                    <ButtonBg href={"https://github.com/carolandrade1"} color={ButtonColor.zinc} text={info.introductionSection.contact[0].name} />
-                    <ButtonBg href={"https://www.linkedin.com/in/carolandrade1/"} color={ButtonColor.zinc} text={info.introductionSection.contact[1].name} />
+                    {info.introductionSection.contact.map((item) => {
+                        return (
+                            <ButtonBg key={item.contactId} href={item.url} color={ButtonColor.zinc} text={item.name} />
+                            )   
+                        }
+                    )}
                 </div>
             </div>
         </div>
