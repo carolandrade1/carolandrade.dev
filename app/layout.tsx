@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { SkipLink } from '@/components/skiplink';
+import AnalyticsWrapper from '@/components/analytics';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main" className="flex-auto md:mx-16 md:flex flex-col md:px-0">
           {children}
+          <AnalyticsWrapper />
         </main>
         <Footer />
       </body>
