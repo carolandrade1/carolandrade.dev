@@ -3,10 +3,8 @@
 // https://amanexplains.com/how-to-create-an-accessible-tabs-component-in-react/
 
 import { SetStateAction, useState } from "react";
-import { info } from "@/lib/info";
 import { Button3d } from "./button3D";
 import { GalleryIcon, GithubIcon, TableIcon } from "./icons";
-import { ButtonBg, ButtonColor } from "./buttonBg";
 
 
 const tabsConfig = [
@@ -20,14 +18,14 @@ const tabsConfig = [
     }
 ];
 
-export const ProjectSection = () => {
+export const ProjectSection = ({data}: any) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const handleClick = (index: SetStateAction<number>) => setSelectedIndex(index);
   
     return (
       <section className="mb-28">
-        <h2 className="text-xl font-bold mb-1">{info.projectSection.h2}</h2>
-        <p className="mb-5 dark:text-gray-300">{info.projectSection.description}</p>
+        <h2 className="text-xl font-bold mb-1">{data.projectSection.h2}</h2>
+        <p className="mb-5 dark:text-gray-300">{data.projectSection.description}</p>
         <div role="tablist" className="flex mb-4 gap-1">
           {tabsConfig.map((tab, index) => (
             <button 
@@ -54,7 +52,7 @@ export const ProjectSection = () => {
               id={`panel-id-${index}`}
               className="overflow-x-auto relative"
             >
-              {TabItem(selectedIndex)}
+              {TabItem(selectedIndex, data)}
             </div>
           ))}
         </div>
@@ -62,11 +60,11 @@ export const ProjectSection = () => {
     );
 }
 
-function TabItem(selectedIndex:number) {
+function TabItem(selectedIndex:number, data:any) {
     if (selectedIndex === 0) {
       return (
         <ul className="grid gap-8 md:grid-cols-2 md:grid-rows-2 ">
-            {info.projectSection.gridProject.map((item) => (
+            {data.projectSection.gridProject.map((item:any) => (
                 <li key={item.cardId} className="border border-gray-300 dark:border-gray-600 rounded-md p-4">
                     <div className="flex justify-between">
                       <h3 className="mb-4 text-lg font-medium">{item.title}</h3>
@@ -106,7 +104,7 @@ function TabItem(selectedIndex:number) {
                 </tr>
             </thead>
             <tbody>
-            {info.projectSection.gridProject.map((item) => (
+            {data.projectSection.gridProject.map((item:any) => (
                 <tr key={item.cardId} className="border-b border-gray-300  dark:border-gray-600 ">
                     <td className="py-6 font-medium">{item.title}</td>
                     <td className="py-6">{item.description}</td>
