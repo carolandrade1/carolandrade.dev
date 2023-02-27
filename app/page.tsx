@@ -1,18 +1,19 @@
 import { IntroductionSection } from "@/components/introduction";
 import { ProjectSection } from "@/components/projects";
-import { supabase } from "@/lib/supabase";
+import { getData } from "@/lib/fetchsupabase";
 import { info } from "@/lib/info";
 
 export const revalidate = 60;
 
-async function getData() {
-  const { data } = await supabase.from('info').select().eq('id', '/');
-
-  return data ? data[0].page : info["/"];
-}
-
 export default async function Home() {
-  const data = await getData();
+  let data
+
+  try {
+    data = await getData();
+  } catch (error) {
+    console.error(error)
+  }
+
   return (
     <>
       {/* <div className="z-[-1] pointer-events-none absolute top-0 left-0 h-52 w-full">
