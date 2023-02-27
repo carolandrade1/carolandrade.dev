@@ -3,7 +3,6 @@ import { DescriptionIcon, MessageIcon } from "@/components/icons";
 import { ButtonBg, ButtonColor } from "@/components/buttonBg";
 
 export function IntroductionSection({data}: any) {
-    console.log(data.name)
   return (
     <section className="mb-16 md:mb-20">
         <div className="mb-5">
