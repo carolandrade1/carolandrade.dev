@@ -5,7 +5,7 @@ import { info } from "@/lib/info";
 
 export const revalidate = 60;
 
-export async function getData() {
+async function getData() {
   const { data } = await supabase.from('info').select().eq('id', '/');
 
   return data ? data[0].page : info["/"];
