@@ -86,7 +86,7 @@ function TabItem(selectedIndex:number, data:any) {
             <thead className="border-b border-gray-300 dark:border-gray-600 text-left">
                 <tr>
                   <th className="leading-8">
-                    <span className="pr-2">🖋</span>
+                    <span aria-hidden="true" className="pr-2">🖋</span>
                     <span>Name</span>
                   </th>
                   <th>
