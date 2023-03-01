@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btnBackground {
+    @apply drop-shadow-md absolute inset-0 -z-10 w-full h-full rounded-lg origin-center group-hover:scale-110 duration-200;
+  }
+}
+
 @layer utilities {
     .height {
       min-height: 100svh;
