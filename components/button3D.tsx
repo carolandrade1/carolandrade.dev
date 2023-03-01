@@ -1,5 +1,3 @@
-// https://www.joshwcomeau.com/animation/3d-button/
-
 interface ButtonComponents {
     href: string;
     text: string;

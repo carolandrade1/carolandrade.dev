@@ -1,7 +1,5 @@
 'use client'
 
-// https://amanexplains.com/how-to-create-an-accessible-tabs-component-in-react/
-
 import { SetStateAction, useState } from "react";
 import { Button3d } from "./button3D";
 import { GalleryIcon, GithubIcon, TableIcon } from "./icons";
