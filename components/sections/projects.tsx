@@ -1,8 +1,8 @@
 'use client'
 
 import { SetStateAction, useState } from "react";
-import { Button3d } from "./button3D";
-import { GalleryIcon, GithubIcon, TableIcon } from "./icons";
+import { Button3d } from "../buttons/button3D";
+import { GalleryIcon, GithubIcon, TableIcon } from "../../lib/icons";
 
 
 const tabsConfig = [

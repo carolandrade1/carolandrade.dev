@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { DescriptionIcon, MessageIcon } from "@/components/icons";
-import { ButtonBg, ButtonColor } from "@/components/buttonBg";
+import { DescriptionIcon, MessageIcon } from "@/lib/icons";
+import { ButtonBg, ButtonColor } from "@/components/buttons/buttonBg";
 
 export function IntroductionSection({data}: any) {
   return (
