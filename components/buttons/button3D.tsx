@@ -1,9 +1,6 @@
-interface ButtonComponents {
-    href: string;
-    text: string;
-}
+import { Button3dComponents } from "@/types/types";
 
-export const Button3d = ({href, text}:ButtonComponents) => {
+export const Button3d = ({href, text}:Button3dComponents) => {
     return (
         <a href={href} aria-label={text} className="pushable group block relative w-full border-none bg-transparent p-0 cursor-pointer outline-offset-4 hover:brightness-110" target="_blank" rel="noopener noreferrer">
             <span aria-hidden="true" className="shadow absolute top-0 left-0 w-full h-full rounded-xl bg-black/25 will-change-transform translate-y-0.5 group-hover:translate-y-1 group-active:translate-y-px"></span>
