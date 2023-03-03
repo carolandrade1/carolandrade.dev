@@ -1,8 +1,8 @@
 import './globals.css';
 import Script from 'next/script';
 import { Inter } from '@next/font/google';
-import { Footer } from '@/components/footer';
-import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/wrapper/footer';
+import { Navbar } from '@/components/wrapper/header/navbar';
 import { SkipLink } from '@/components/skiplink';
 import AnalyticsWrapper from '@/components/analytics';
 

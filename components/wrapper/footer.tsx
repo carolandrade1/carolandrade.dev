@@ -1,5 +1,3 @@
-import { GithubIcon, LinkedinIcon } from '@/components/icons';
-
 export const Footer = () => {
     return (
         <footer className="flex justify-center">

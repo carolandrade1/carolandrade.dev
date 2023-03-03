@@ -1,7 +1,8 @@
-import { IntroductionSection } from "@/components/introduction";
-import { ProjectSection } from "@/components/projects";
 import { supabase } from "@/lib/supabase";
 import { info } from "@/lib/info";
+import { IntroductionSection } from "@/components/sections/introduction";
+import { ProjectSection } from "@/components/sections/projects";
+import { LibrarySection } from "@/components/sections/librarySection";
 
 export const revalidate = 60;
 
@@ -12,7 +13,14 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data = await getData();
+  let data
+  
+  try {
+    data = await getData();
+  } catch (error) {
+    console.error(error)
+  }
+
   return (
     <>
       {/* <div className="z-[-1] pointer-events-none absolute top-0 left-0 h-52 w-full">
@@ -22,6 +30,7 @@ export default async function Home() {
       </div> */}
       <IntroductionSection data={data} />
       <ProjectSection data={data}/>
+      <LibrarySection data={data}/>
     </>
   );
 }
