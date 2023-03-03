@@ -33,4 +33,28 @@
     .pushable:focus:not(:focus-visible) {
       outline: none;
     }
+
+
+    /* Firefox */
+    .scrollbar {
+      scrollbar-color: rgb(134, 120, 158) transparent;
+      scrollbar-width: thin;
+    }
+    /* WebKit and Chromiums */
+    .scrollbar::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: transparent;
+    }
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: rgb(134, 120, 158);
+      border-radius: 5px;
+    }
+    .scrollbarDark {
+      scrollbar-color: rgb(121, 99, 160) transparent;
+    }
+    /* WebKit and Chromiums */
+    .scrollbarDark::-webkit-scrollbar-thumb {
+      background: rgb(121, 99, 160);
+    }
   }
