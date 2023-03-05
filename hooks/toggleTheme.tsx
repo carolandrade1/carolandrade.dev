@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 
 const transition = {
@@ -110,32 +111,26 @@ const SunIcon = () => {
 };
 
 export const ToggleTheme = () => {
-  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme!);
-  const inactiveTheme = activeTheme === "light" ? "dark" : "light";
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem("theme");
-    savedTheme && setActiveTheme(savedTheme);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
-  useEffect(() => {
-    document.body.dataset.theme = activeTheme;
-    if ( activeTheme === 'light' ) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-    window.localStorage.setItem("theme", activeTheme);
-  }, [activeTheme]);
+  if (!mounted) return null;
+
+  const isLight = resolvedTheme === `light`;
+  const oppositeTheme = isLight ? `dark` : `light`;
+
+  const toggleTheme = () => setTheme(oppositeTheme);
   
   return (
     <button 
       type="button"
-      onClick={() => setActiveTheme(inactiveTheme)}
-      aria-label={`Change to ${inactiveTheme} mode`}
-      title={`Change to ${inactiveTheme} mode`}
+      onClick={toggleTheme}
+      aria-label={`Change to ${oppositeTheme} mode`}
+      title={`Change to ${oppositeTheme} mode`}
     >
-      {activeTheme === 'dark' ? (
+      {oppositeTheme === 'light' ? (
           <SunIcon />
         ) : (
           <MoonIcon />

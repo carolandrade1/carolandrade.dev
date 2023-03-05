@@ -1,10 +1,10 @@
 import './globals.css';
-import Script from 'next/script';
-import { Inter } from '@next/font/google';
-import { Footer } from '@/components/wrapper/footer';
-import { Navbar } from '@/components/wrapper/header/navbar';
-import { SkipLink } from '@/components/skiplink';
-import AnalyticsWrapper from '@/components/analytics';
+import { Inter } from 'next/font/google';
+import { Footer } from '@/components/layout/footer';
+import { Navbar } from '@/components/layout/header/navbar';
+import { SkipLink } from '@/components/miscellaneous/skiplink';
+import AnalyticsWrapper from '@/components/miscellaneous/analytics';
+import Providers from '@/hooks/provider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,29 +36,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const setInitialTheme = `
-    function getUserPreference() {
-      if(window.localStorage.getItem('theme')) {
-        return window.localStorage.getItem('theme')
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light'
-    }
-    document.body.dataset.theme = getUserPreference();
-  `;
-
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
       <body className="text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
-        <Script id="data-theme" dangerouslySetInnerHTML={{ __html: setInitialTheme }}/>
-        <SkipLink />
-        <Navbar />
-        <main id="main" className="flex-auto md:mx-16 md:flex flex-col md:px-0">
-          {children}
-          <AnalyticsWrapper />
-        </main>
-        <Footer />
+        <Providers>
+          <SkipLink />
+          <Navbar />
+          <main id="main" className="flex-auto md:mx-16 md:flex flex-col md:px-0">
+            {children}
+            <AnalyticsWrapper />
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

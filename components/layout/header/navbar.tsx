@@ -1,12 +1,9 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+
+import { ToggleTheme } from '@/hooks/toggleTheme';
 import { Logo } from './logo';
 
-const ToggleTheme = dynamic(async () => {
-let myModule = await import('./toggleTheme')
-return myModule.ToggleTheme;
-}, { ssr: false });
 
 export const Navbar = () => {
 

@@ -13,7 +13,8 @@ export interface ButtonBgComponents {
 
 export enum ButtonColor {
     zinc = "bg-zinc-800 dark:bg-zinc-700 group-hover:opacity-90",
-    darkPurple = "bg-purple-600"
+    darkPurple = "bg-purple-600",
+    indigo = "bg-indigo-600 dark:bg-indigo-700 group-hover:opacity-90"
 }
 
 // All data
