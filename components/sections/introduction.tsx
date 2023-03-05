@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { DescriptionIcon, MessageIcon } from "@/lib/icons";
-import { ButtonBg } from "@/components/buttons/buttonBg";
+import { ButtonBg } from "@/components/miscellaneous/buttons/buttonBg";
 import { ButtonColor, Contacts, Introduction } from "@/types/types";
 
 export function IntroductionSection({data}: any) {
@@ -35,7 +35,7 @@ const introductionSection: Introduction = data.introductionSection;
                 <div className="flex flex-wrap gap-4">
                     {introductionSection.contact.map((item: Contacts) => {
                         return (
-                            <ButtonBg key={item.contactId} href={item.url} color={ButtonColor.zinc} text={item.name} />
+                            <ButtonBg key={item.contactId} href={item.url} color={ButtonColor.indigo} text={item.name} />
                             )   
                         }
                     )}
