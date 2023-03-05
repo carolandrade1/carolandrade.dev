@@ -1,8 +1,7 @@
 'use client';
 
-
-import { ToggleTheme } from '@/hooks/toggleTheme';
 import { Logo } from './logo';
+import { ToggleTheme } from './toggleTheme';
 
 
 export const Navbar = () => {
