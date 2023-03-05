@@ -1,3 +1,110 @@
+import { motion } from "framer-motion";
+
+const transition = {
+    type: "spring",
+    stiffness: 200,
+    damping: 10
+};
+  
+export const MoonIcon = () => {
+    const variants = {
+        initial: { scale: 0.6, rotate: 90 },
+        animate: { scale: 1, rotate: 0, transition },
+        whileTap: { scale: 0.95, rotate: 15 }
+    };
+
+    return (
+        <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1.5em"
+        height="1.5em"
+        viewBox="0 0 50 50"
+        key="moon"
+        aria-hidden="true"
+        >
+        <motion.path
+            d="M 43.81 29.354 C 43.688 28.958 43.413 28.626 43.046 28.432 C 42.679 28.238 42.251 28.198 41.854 28.321 C 36.161 29.886 30.067 28.272 25.894 24.096 C 21.722 19.92 20.113 13.824 21.683 8.133 C 21.848 7.582 21.697 6.985 21.29 6.578 C 20.884 6.172 20.287 6.022 19.736 6.187 C 10.659 8.728 4.691 17.389 5.55 26.776 C 6.408 36.163 13.847 43.598 23.235 44.451 C 32.622 45.304 41.28 39.332 43.816 30.253 C 43.902 29.96 43.9 29.647 43.81 29.354 Z"
+            fill="currentColor"
+            initial="initial"
+            animate="animate"
+            whileTap="whileTap"
+            variants={variants}
+        />
+        </motion.svg>
+    );
+};
+
+export const SunIcon = () => {
+    const whileTap = { scale: 0.95, rotate: 15 };
+
+    const raysVariants = {
+        initial: { rotate: 45 },
+        animate: { rotate: 0, transition }
+    };
+
+    const coreVariants = {
+        initial: { scale: 1.5 },
+        animate: { scale: 1, transition }
+    };
+
+    return (
+        <motion.svg
+        width="1.5em"
+        height="1.5em"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        key="sun"
+        aria-hidden="true"
+        whileTap={whileTap}
+        // Centers the rotation anchor point vertically & horizontally
+        style={{ originX: "50%", originY: "50%" }}
+        >
+        <motion.circle
+            cx="11.9998"
+            cy="11.9998"
+            r="5.75375"
+            fill="currentColor"
+            initial="initial"
+            animate="animate"
+            variants={coreVariants}
+        />
+        <motion.g initial="initial" animate="animate" variants={raysVariants}>
+            <circle
+            cx="3.08982"
+            cy="6.85502"
+            r="1.71143"
+            transform="rotate(-60 3.08982 6.85502)"
+            fill="currentColor"
+            />
+            <circle
+            cx="3.0903"
+            cy="17.1436"
+            r="1.71143"
+            transform="rotate(-120 3.0903 17.1436)"
+            fill="currentColor"
+            />
+            <circle cx="12" cy="22.2881" r="1.71143" fill="currentColor" />
+            <circle
+            cx="20.9101"
+            cy="17.1436"
+            r="1.71143"
+            transform="rotate(-60 20.9101 17.1436)"
+            fill="currentColor"
+            />
+            <circle
+            cx="20.9101"
+            cy="6.8555"
+            r="1.71143"
+            transform="rotate(-120 20.9101 6.8555)"
+            fill="currentColor"
+            />
+            <circle cx="12" cy="1.71143" r="1.71143" fill="currentColor" />
+        </motion.g>
+        </motion.svg>
+    );
+};
+
 export const GithubIcon = () => {
     return (
         <svg height="24" width="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.475 2 2 6.47 2 11.988c0 4.42 2.862 8.153 6.838 9.476.5.087.687-.212.687-.474 0-.238-.013-1.024-.013-1.86C7 19.59 6.35 18.517 6.15 17.955c-.113-.287-.6-1.174-1.025-1.411-.35-.187-.85-.65-.013-.662.788-.012 1.35.724 1.538 1.024.9 1.51 2.338 1.086 2.912.824.088-.65.35-1.086.638-1.336-2.225-.25-4.55-1.111-4.55-4.931 0-1.087.387-1.986 1.025-2.685-.1-.25-.45-1.273.1-2.646 0 0 .837-.263 2.75 1.023a9.29 9.29 0 0 1 2.5-.337c.85 0 1.7.113 2.5.337 1.912-1.298 2.75-1.023 2.75-1.023.55 1.373.2 2.397.1 2.646.637.7 1.025 1.586 1.025 2.685 0 3.832-2.337 4.681-4.562 4.931.362.312.675.912.675 1.848 0 1.336-.013 2.41-.013 2.747 0 .262.188.574.688.474C19.137 20.141 22 16.395 22 11.988 22 6.47 17.525 2 12 2Z" fill="currentColor"></path></svg>
