@@ -68,21 +68,19 @@ function TabItem(selectedIndex: number, projectSection: Projects) {
         {projectSection.gridProject.map((item: Project) => (
           <li
             key={item.cardId}
-            className="border border-gray-300 dark:border-gray-600 rounded-md p-4 hover:border-black"
+            className="flex flex-col justify-between border border-gray-300 dark:border-gray-600 rounded-md p-4 hover:border-black"
           >
             <div className="flex justify-between">
               <h3 className="mb-4 text-lg font-medium">{item.title}</h3>
-              <div>
-                <a
-                  href={item.linkCode}
-                  aria-label="View code on Github"
-                  title="View code on Github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GithubIcon />
-                </a>
-              </div>
+              <a
+                href={item.linkCode}
+                aria-label="View code on Github"
+                title="View code on Github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GithubIcon />
+              </a>
             </div>
             <p className="mb-4 dark:text-gray-300">{item.description}</p>
             <Button3d href={item.link} text={item.buttonText} />
@@ -92,28 +90,28 @@ function TabItem(selectedIndex: number, projectSection: Projects) {
     );
   }
   return (
-    <table className="min-w-[600px] table-auto md:table-auto w-full border-collapse border-y border-spacing-2 border-gray-300 dark:border-gray-600 text-sm md:text-base mb-4">
+    <table className="min-w-[600px] table-auto md:table-fixed w-full border-collapse border-y border-spacing-2 border-gray-300 dark:border-gray-600 text-sm md:text-base mb-4">
       <thead className="border-b border-gray-300 dark:border-gray-600 text-left">
         <tr>
-          <th className="leading-8">
+          <th className="">
             <span aria-hidden="true" className="pr-2">
               🖋
             </span>
             <span>Name</span>
           </th>
-          <th>
+          <th className="md:w-2/5">
             <span aria-hidden="true" className="pr-2">
               📄
             </span>
             <span>Description</span>
           </th>
-          <th>
+          <th className="w-[18%] md:w-1/6">
             <span aria-hidden="true" className="pr-2">
               📎
             </span>
             <span>Link</span>
           </th>
-          <th>
+          <th className="w-[12%] md:w-1/6">
             <span aria-hidden="true" className="pr-2">
               💻
             </span>

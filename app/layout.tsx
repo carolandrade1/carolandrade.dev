@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Carol Santos',
+  title: 'Carol Andrade Santos',
   description: 'Portfolio',
   generator: 'Next.js',
   applicationName: 'Portfolio',
@@ -26,10 +26,10 @@ export const metadata = {
       shortcut: 'logoIcon.svg',
     },
   openGraph: {
-    title: 'Carol Andrade | Portfolio',
+    title: 'Carol Andrade Santos',
     description: 'Portfolio',
     url: 'https://www.carolandrade.dev/',
-    siteName: 'Carol Andrade | Portfolio',
+    siteName: 'Carol Andrade Santos',
     images: [
       {
         url: 'public/og.png',
