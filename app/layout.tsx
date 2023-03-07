@@ -1,8 +1,9 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { Footer } from '@/components/layout/footer';
-import { Navbar } from '@/components/layout/header/navbar';
+import { Banner } from '@/components/layout/header/banner';
 import { SkipLink } from '@/components/miscellaneous/skiplink';
+import { Navbar } from '@/components/layout/header/navbar';
+import { Footer } from '@/components/layout/footer';
 import AnalyticsWrapper from '@/components/miscellaneous/analytics';
 import Providers from '@/hooks/provider';
 
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
       <body className="text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
+        <Banner />
         <Providers>
           <SkipLink />
           <Navbar />

@@ -34,6 +34,9 @@
       outline: none;
     }
 
+    .banner {
+      background: radial-gradient(40.51% 40.51% at 50% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(89.9deg, #4C4AD6 0.1%, #8C48BD 100.86%);
+    }
 
     /* Firefox */
     .scrollbar {
@@ -47,14 +50,14 @@
       background-color: transparent;
     }
     .scrollbar::-webkit-scrollbar-thumb {
-      background: rgb(134, 120, 158);
+      background: #8C56BC;
       border-radius: 5px;
     }
     .scrollbarDark {
-      scrollbar-color: rgb(121, 99, 160) transparent;
+      scrollbar-color: #8C56BC transparent;
     }
     /* WebKit and Chromiums */
     .scrollbarDark::-webkit-scrollbar-thumb {
-      background: rgb(121, 99, 160);
+      background: #8C56BC;
     }
   }
