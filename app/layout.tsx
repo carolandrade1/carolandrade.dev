@@ -23,13 +23,12 @@ export const metadata = {
   creator: 'Carol Andrade',
   publisher: 'Carol Andrade',
   icons: {
-      shortcut: 'logoIcon.svg',
+      shortcut: '/favicon.ico',
     },
   openGraph: {
     title: 'Carol Andrade | Portfolio',
     description: 'Portfolio',
     url: 'https://www.carolandrade.dev/',
-    siteName: 'Carol Andrade | Portfolio',
     images: [
       {
         url: 'public/og.png',
@@ -52,13 +51,11 @@ export const metadata = {
   },
 }
 
-
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
-
   return (
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
       <body className="text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
