@@ -68,23 +68,25 @@ function TabItem(selectedIndex: number, projectSection: Projects) {
         {projectSection.gridProject.map((item: Project) => (
           <li
             key={item.cardId}
-            className="border border-gray-300 dark:border-gray-600 rounded-md p-4 hover:border-black"
+            className="flex flex-col justify-between border border-gray-300 dark:border-gray-600 rounded-md p-4 hover:border-black"
           >
-            <div className="flex justify-between">
-              <h3 className="mb-4 text-lg font-medium">{item.title}</h3>
-              <div>
-                <a
-                  href={item.linkCode}
-                  aria-label="View code on Github"
-                  title="View code on Github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GithubIcon />
-                </a>
+            <div>
+              <div className="flex justify-between">
+                <h3 className="mb-4 text-lg font-medium">{item.title}</h3>
+                <div>
+                  <a
+                    href={item.linkCode}
+                    aria-label="View code on Github"
+                    title="View code on Github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GithubIcon />
+                  </a>
+                </div>
               </div>
+              <p className="mb-4 dark:text-gray-300">{item.description}</p>
             </div>
-            <p className="mb-4 dark:text-gray-300">{item.description}</p>
             <Button3d href={item.link} text={item.buttonText} />
           </li>
         ))}
