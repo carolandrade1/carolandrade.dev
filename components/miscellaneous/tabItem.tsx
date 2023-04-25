@@ -89,7 +89,7 @@ export default function TabItem(
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View code live"
-                className="bg-gray-100 rounded-lg px-1 py-[2px] border border-transparent hover:border-gray-400"
+                className="bg-gray-100 dark:bg-gray-800 rounded-lg px-1 py-[2px] border border-transparent hover:border-gray-400"
               >
                 {item.buttonText}
               </a>
