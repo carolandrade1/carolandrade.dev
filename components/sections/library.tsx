@@ -19,9 +19,9 @@ export function LibrarySection({ data }: any) {
   return (
     <>
       <section className="mb-16 md:mb-20">
-        <h2 className="text-xl font-bold mb-1">{librarySection.h2}</h2>
+        <h2 className="text-2xl font-bold mb-1">{librarySection.h2}</h2>
         <p className="mb-6 dark:text-gray-300">{librarySection.description}</p>
-        <p className="">Filter</p>
+        <p className="text-gray-600">Filter</p>
         <hr></hr>
         <div className="flex flex-wrap py-2 gap-2 mb-2">
           <button className="py-1 px-4 bg-purple-200 rounded-lg hover:bg-purple-400 dark:bg-purple-600 dark:hover:bg-purple-800" onClick={() => setArticles(tableRef)}>

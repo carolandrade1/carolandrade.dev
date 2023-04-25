@@ -25,7 +25,7 @@ const introductionSection: Introduction = data.introductionSection;
                     <DescriptionIcon />
                     About
                 </h3>
-                <p className="md:max-w-xl dark:text-gray-300">{introductionSection.description}</p>
+                <p className="md:max-w-md dark:text-gray-300">{introductionSection.description}</p>
             </div>
             <div className="flex flex-col md:flex-row md:items-start">
                 <h3 className="flex items-center gap-2 mb-1 text-sm text-gray-600 dark:text-gray-400 md:min-w-[128px]">
