@@ -59,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
-      <body className="text-gray-900 dark:text-gray-50 bg-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
+      <body className="text-gray-900 dark:text-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
         <Banner />
         <Providers>
           <SkipLink />
