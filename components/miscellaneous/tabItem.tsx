@@ -1,5 +1,5 @@
-import { Button3d } from "../miscellaneous/buttons/button3D";
-import { ExternalLink, GithubIcon } from "../../lib/icons";
+import { Button3d } from "@/components/miscellaneous/button3D";
+import { ExternalLink, GithubIcon } from "@/lib/icons";
 import { Project, Projects } from "@/types/types";
 
 export default function TabItem(
@@ -49,25 +49,25 @@ export default function TabItem(
     <table className="min-w-[600px] table-auto md:table-auto w-full border-collapse border-y border-spacing-2 border-gray-300 dark:border-gray-600 text-sm md:text-base mb-4">
       <thead className="border-b border-gray-300 dark:border-gray-600 text-left">
         <tr className="text-gray-600">
-          <th className="leading-8">
+          <th className="leading-8 min-w-[70px]">
             <span aria-hidden="true" className="grayscale text-xs">
               🖋
             </span>
             <span className="font-normal text-sm pl-1">Name</span>
           </th>
-          <th>
+          <th className="leading-8 min-w-[70px]">
             <span aria-hidden="true" className="grayscale text-xs">
               📄
             </span>
             <span className="font-normal text-sm pl-1">Description</span>
           </th>
-          <th>
+          <th className="leading-8 min-w-[70px]">
             <span aria-hidden="true" className="grayscale text-xs">
               📎
             </span>
             <span className="font-normal text-sm pl-1">Link</span>
           </th>
-          <th>
+          <th className="leading-8 min-w-[70px]">
             <span aria-hidden="true" className="grayscale text-xs">
               💻
             </span>
@@ -89,18 +89,19 @@ export default function TabItem(
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View code live"
-                className="bg-gray-100 dark:bg-gray-800 rounded-lg px-1 py-[2px] border border-transparent hover:border-gray-400"
+                className="flex justify-center w-full bg-gray-100 dark:bg-gray-800 rounded-lg px-1 py-[2px] border border-transparent hover:border-gray-400"
               >
                 {item.buttonText}
               </a>
             </td>
-            <td className="flex justify-center py-2">
+            <td className="flex justify-center py-2 min-h-[50px] h-full">
               <a
                 href={item.linkCode}
                 aria-label="View code on Github"
                 title="View code on Github"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center"
               >
                 <GithubIcon />
               </a>
