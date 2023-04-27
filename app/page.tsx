@@ -10,6 +10,7 @@ async function getData() {
   return data ? data[0].page : info["/"];
 }
 
+export const revalidate = 60;
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
