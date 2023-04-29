@@ -46,7 +46,7 @@ export default function TabItem(
     );
   }
   return (
-    <table className="min-w-[600px] table-auto md:table-auto w-full border-collapse border-y border-spacing-2 border-gray-300 dark:border-gray-600 text-sm md:text-base mb-4">
+    <table className="min-w-[750px] table-auto w-full border-collapse border-y border-spacing-2 border-gray-300 dark:border-gray-600 text-sm md:text-base mb-4">
       <thead className="border-b border-gray-300 dark:border-gray-600 text-left">
         <tr className="text-gray-600">
           <th className="leading-8 min-w-[70px]">
@@ -61,13 +61,13 @@ export default function TabItem(
             </span>
             <span className="font-normal text-sm pl-1">Description</span>
           </th>
-          <th className="leading-8 min-w-[70px]">
+          <th className="leading-8 min-w-[70px] text-center">
             <span aria-hidden="true" className="grayscale text-xs">
               📎
             </span>
             <span className="font-normal text-sm pl-1">Link</span>
           </th>
-          <th className="leading-8 min-w-[70px]">
+          <th className="leading-8 min-w-[70px] text-center">
             <span aria-hidden="true" className="grayscale text-xs">
               💻
             </span>

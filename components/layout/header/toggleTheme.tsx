@@ -8,7 +8,7 @@ export const ToggleTheme = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [setMounted]);
 
   if (!mounted) return null;
 
