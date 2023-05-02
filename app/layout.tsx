@@ -5,7 +5,7 @@ import { SkipLink } from '@/components/miscellaneous/skiplink';
 import { Navbar } from '@/components/layout/header/navbar';
 import { Footer } from '@/components/layout/footer';
 import AnalyticsWrapper from '@/components/miscellaneous/analytics';
-import Providers from '@/hooks/provider';
+import Providers from '@/hooks/useProvider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -59,12 +59,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
-      <body className="text-gray-900 dark:text-gray-50 dark:bg-zinc-900 antialiased m-auto max-w-4xl p-6 flex flex-col height">
-        <Banner />
+      <body className="text-black dark:bg-zinc-900 antialiased m-auto max-w-7xl p-6 flex flex-col height">
         <Providers>
           <SkipLink />
           <Navbar />
-          <main id="main" className="flex-auto md:mx-12 md:flex flex-col md:px-0">
+          <main id="main" className="flex-auto m-auto md:flex flex-col md:px-0 max-w-3xl w-full">
             {children}
             <AnalyticsWrapper />
           </main>
