@@ -19,50 +19,51 @@ export function LibrarySection({ data }: any) {
   return (
     <>
       <section className="mb-16 md:mb-20">
-        <h2 className="text-2xl font-bold mb-1">{librarySection.h2}</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-1 dark:text-white">{librarySection.h2}</h2>
         <p className="mb-6 dark:text-gray-300">{librarySection.description}</p>
-        <p className="text-gray-600">Filter</p>
-        <hr></hr>
-        <div className="flex flex-wrap py-2 gap-2 mb-2">
-          <button className="py-1 px-4 bg-purple-200 rounded-lg hover:bg-purple-400 dark:bg-purple-600 dark:hover:bg-purple-800" onClick={() => setArticles(tableRef)}>
-            All
-          </button>
-          {Object.values(Subject).map((item: Subject, index: number) => {
-            return (
-              <button
-                className="py-1 px-4 bg-purple-200 rounded-lg hover:bg-purple-400 dark:bg-purple-600 dark:hover:bg-purple-800"
-                onClick={() => filterSubjects(item)}
-                key={index}
-              >
-                {item}
-              </button>
-            );
-          })}
-        </div>
 
-        <ul className="h-[400px] overflow-y-scroll scrollbar dark:scrollbarDark">
-          {articles.map((item: Article) => {
-            return (
-              <li key={item.id} className="rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col p-2"
+        <div className="border border-gray-100 dark:bg-white shadow-xl p-4 md:p-6 rounded-2xl">
+          <p className="">Filter</p>
+          <hr></hr>
+          <div className="flex flex-wrap py-2 gap-2 mb-2">
+            {Object.values(Subject).map((item: Subject, index: number) => {
+              return (
+                <button
+                  type="button"
+                  className="py-1 px-4 rounded-lg border border-gray-200 hover:bg-gray-100"
+                  onClick={() => filterSubjects(item)}
+                  key={index}
                 >
-                  <p className="font-medium">
-                    {item.title}
-                  </p>
-                  <p
-                    className="text-sm text-gray-600 dark:text-gray-400"
+                  {item}
+                </button>
+              );
+            })}
+          </div>
+
+          <ul className="h-[400px] overflow-y-scroll scrollbar dark:scrollbarDark">
+            {articles.map((item: Article) => {
+              return (
+                <li key={item.id} className="rounded-lg hover:bg-gray-200">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col p-2"
                   >
-                    {item.author}
-                  </p>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+                    <p className="font-medium">
+                      {item.title}
+                    </p>
+                    <p
+                      className="text-sm text-gray-600"
+                    >
+                      {item.author}
+                    </p>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </section>
     </>
   );

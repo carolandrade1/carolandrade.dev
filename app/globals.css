@@ -4,7 +4,7 @@
 
 @layer components {
   .btnBackground {
-    @apply drop-shadow-md absolute inset-0 -z-10 w-full h-full rounded-lg origin-center group-hover:scale-110 duration-200;
+    @apply shadow-lg absolute inset-0 -z-10 w-full h-full rounded-lg origin-center duration-100;
   }
 }
 
@@ -12,7 +12,7 @@
     .height {
       min-height: 100svh;
     }
-    .pushable {
+    /* .pushable {
       transition: filter 250ms;
     }
     .shadow, .front {
@@ -36,7 +36,7 @@
 
     .banner {
       background: radial-gradient(40.51% 40.51% at 50% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(89.9deg, #4C4AD6 0.1%, #8C48BD 100.86%);
-    }
+    } */
 
     /* Firefox */
     .scrollbar {
@@ -50,7 +50,7 @@
       background-color: transparent;
     }
     .scrollbar::-webkit-scrollbar-thumb {
-      background: #8C56BC;
+      background: #a47ec5;
       border-radius: 5px;
     }
     .scrollbarDark {
@@ -58,6 +58,6 @@
     }
     /* WebKit and Chromiums */
     .scrollbarDark::-webkit-scrollbar-thumb {
-      background: #8C56BC;
+      background: #a47ec5;
     }
   }
