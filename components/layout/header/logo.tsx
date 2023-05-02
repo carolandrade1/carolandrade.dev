@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <Link
     href="/"
-    aria-label="Link to homepage"
+    aria-label="Link to home"
     title="Home"
     className="flex items-center gap-x-1"
     >

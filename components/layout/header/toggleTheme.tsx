@@ -23,7 +23,7 @@ export const ToggleTheme = () => {
       onClick={toggleTheme}
       aria-label={`Change to ${oppositeTheme} mode`}
       title={`Change to ${oppositeTheme} mode`}
-      className="p-2 rounded-md bg-slate-50/30 border border-transparent hover:border-white"
+      className="w-[35px] h-[35px] flex justify-center items-center rounded-md text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
     >
       {oppositeTheme === 'light' ? (
           <SunIcon />

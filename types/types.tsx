@@ -12,20 +12,9 @@ export interface ButtonBgComponents {
 }
 
 export enum ButtonColor {
-    zinc = "bg-zinc-800 dark:bg-zinc-700 group-hover:opacity-90",
-    darkPurple = "bg-purple-600",
+    default = "bg-black dark:bg-white border border-gray-300 group-hover:scale-110",
     indigo = "bg-indigo-600 dark:bg-indigo-700 group-hover:opacity-90"
 }
-
-// All data
-// export interface Database {
-//     name: string
-//     photoUrl: string
-//     photoAlt: string
-//     introductionSection: Introduction
-//     projectSection: Projects
-//     librarySection: Library
-// }
 
 // Introduction Section
 export interface Introduction {
@@ -68,6 +57,7 @@ export interface Library {
 }
 
 export enum Subject {
+    ALL = 'All',
     ACCESSIBILITY = 'Accessibility',
     TOOLS = 'Tools',
     STYLE = 'Style',
