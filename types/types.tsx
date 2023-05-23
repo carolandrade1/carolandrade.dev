@@ -7,6 +7,7 @@ export interface Button3dComponents {
 // ButtonBG
 export interface ButtonBgComponents {
     color: ButtonColor;
+    ariaText: string;
     text: string;
     href: string;
 }
@@ -46,6 +47,8 @@ export interface Project {
     link: string
     linkCode: string
     buttonText: string
+    buttonAriaText: string;
+    buttonAriaTextCode: string;
 }
 
 
