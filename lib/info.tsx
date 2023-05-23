@@ -35,7 +35,9 @@ export const info = {
           "description": "Old portfolio using Styled-components and Next.js",
           "link": "https://carol-portfolio.vercel.app/",
           "linkCode": "https://github.com/carolandrade1/Carol_Portfolio",
-          "buttonText": "See live"
+          "buttonText": "See live",
+          "buttonAriaText": "See project Old Portfolio Live",
+          "buttonAriaTextCode": "See project Old Portfolio Code"
         },
         {
           "cardId": "02",
@@ -43,7 +45,9 @@ export const info = {
           "description": "Google clone using Next.js and Tailwind",
           "link": "https://google-clone-livid-zeta.vercel.app/pt-BR",
           "linkCode": "https://github.com/carolandrade1/GoogleClone",
-          "buttonText": "See live"
+          "buttonText": "See live",
+          "buttonAriaText": "See project Google clone Live",
+          "buttonAriaTextCode": "See project Google clone Code"
         },
         {
           "cardId": "03",
@@ -51,7 +55,9 @@ export const info = {
           "description": "Multiple projects manipulating the DOM",
           "link": "https://carolandrade1.github.io/Javascript_Projects/",
           "linkCode": "https://github.com/carolandrade1/Javascript_Projects",
-          "buttonText": "See live"
+          "buttonText": "See live",
+          "buttonAriaText": "See Projects JavaScript Live",
+          "buttonAriaTextCode": "See Projects JavaScript Code"
         },
         {
           "cardId": "04",
@@ -59,7 +65,9 @@ export const info = {
           "description": "10 Modern CSS single-line styling",
           "link": "https://carolandrade1.github.io/Responsive_Layout/",
           "linkCode": "https://github.com/carolandrade1/Responsive_Layout",
-          "buttonText": "See live"
+          "buttonText": "See live",
+          "buttonAriaText": "See project Responsive Layouts Live",
+          "buttonAriaTextCode": "See project Responsive Layouts Code"
         },
         {
           "cardId": "05",
@@ -67,7 +75,9 @@ export const info = {
           "description": "Clone of Instagram using Next.js, Styled-components and Graphql",
           "link": "https://instalura-cas.vercel.app/",
           "linkCode": "https://github.com/carolandrade1/instalura",
-          "buttonText": "See live"
+          "buttonText": "See live",
+          "buttonAriaText": "See project Instalura Live",
+          "buttonAriaTextCode": "See project Instalura Code"
         }
       ]
     },

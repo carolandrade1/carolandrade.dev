@@ -46,6 +46,8 @@ export interface Project {
     link: string
     linkCode: string
     buttonText: string
+    buttonAriaText: string;
+    buttonAriaTextCode: string;
 }
 
 

@@ -14,24 +14,24 @@ export default function TabItem(
             key={item.cardId}
             className="group relative flex flex-col justify-between border border-gray-200 rounded-md p-4 group hover:bg-gray-50 transition ease-out duration-300"
           >
-            <div className="absolute shadow-sm bg-white opacity-1 sm:opacity-0 overflow-hidden border-gray-300 border group-hover:opacity-100 flex transition ease-out duration-500 right-4 justify-between rounded-lg">
+            <div className="absolute flex transition ease-out duration-500 right-4 justify-between rounded-lg">
               <a
                 href={item.linkCode}
-                aria-label="View code on Github"
-                title="View code on Github"
+                aria-label={item.buttonAriaTextCode}
+                title={item.buttonAriaTextCode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-[6px] py-1 hover:bg-gray-100 border-r border-gray-300 "
+                className="px-[6px] py-1 shadow-sm bg-white hover:bg-gray-100 border-r border-gray-300 border opacity-100 sm:opacity-0 group-hover:opacity-100 rounded-l-lg focus:opacity-100"
               >
                 <GithubIcon />
               </a>
               <a
                 href={item.link}
-                aria-label="View code live"
-                title="View code live"
+                aria-label={item.buttonAriaText}
+                title={item.buttonAriaText}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-[6px] py-1 hover:bg-gray-100 border-l border-gray-300"
+                className="px-[6px] py-1 shadow-sm bg-white hover:bg-gray-100 border-r border-gray-300 border opacity-100 sm:opacity-0 group-hover:opacity-100 rounded-r-lg focus:opacity-100"
               >
                 <ExternalLink />
               </a>
@@ -87,8 +87,9 @@ export default function TabItem(
               <a
                 href={item.link}
                 target="_blank"
-                rel="noopener noreferrer"
-                title="View code live"
+                rel={item.buttonAriaText}
+                title={item.buttonAriaText}
+                aria-label={item.buttonAriaText}
                 className="flex justify-center text-center items-center w-full bg-gray-100 rounded-lg px-1 py-[2px] border border-transparent hover:border-gray-400"
               >
                 {item.buttonText}
@@ -97,8 +98,8 @@ export default function TabItem(
             <td className="flex justify-center py-2 min-h-[50px] h-full">
               <a
                 href={item.linkCode}
-                aria-label="View code on Github"
-                title="View code on Github"
+                aria-label={item.buttonAriaTextCode}
+                title={item.buttonAriaTextCode}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
