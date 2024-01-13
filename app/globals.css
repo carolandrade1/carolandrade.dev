@@ -9,10 +9,10 @@
 }
 
 @layer utilities {
-    .height {
-      min-height: 100svh;
-    }
-    /* .pushable {
+  .height {
+    min-height: 100svh;
+  }
+  /* .pushable {
       transition: filter 250ms;
     }
     .shadow, .front {
@@ -38,26 +38,76 @@
       background: radial-gradient(40.51% 40.51% at 50% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(89.9deg, #4C4AD6 0.1%, #8C48BD 100.86%);
     } */
 
-    /* Firefox */
-    .scrollbar {
-      scrollbar-color: rgb(134, 120, 158) transparent;
-      scrollbar-width: thin;
+  /* Firefox */
+  .scrollbar {
+    scrollbar-color: rgb(134, 120, 158) transparent;
+    scrollbar-width: thin;
+  }
+  /* WebKit and Chromiums */
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #a47ec5;
+    border-radius: 5px;
+  }
+  .scrollbarDark {
+    scrollbar-color: #8c56bc transparent;
+  }
+  /* WebKit and Chromiums */
+  .scrollbarDark::-webkit-scrollbar-thumb {
+    background: #a47ec5;
+  }
+
+  @keyframes sparkleAnimation {
+    0% {
+      transform: scale(0) rotate(0deg);
     }
-    /* WebKit and Chromiums */
-    .scrollbar::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-      background-color: transparent;
+    50% {
+      transform: scale(1) rotate(90deg);
     }
-    .scrollbar::-webkit-scrollbar-thumb {
-      background: #a47ec5;
-      border-radius: 5px;
-    }
-    .scrollbarDark {
-      scrollbar-color: #8C56BC transparent;
-    }
-    /* WebKit and Chromiums */
-    .scrollbarDark::-webkit-scrollbar-thumb {
-      background: #a47ec5;
+    100% {
+      transform: scale(0) rotate(180deg);
     }
   }
+
+  @keyframes comeInOut {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  .spakleSvg {
+    display: block;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: spin 1000ms linear forwards;
+    }
+  }
+
+  .sparkleWrapper {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: comeInOut 1500ms forwards;
+    }
+  }
+}
