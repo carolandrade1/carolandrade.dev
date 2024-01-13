@@ -5,12 +5,12 @@ import { SkipLink } from '@/components/miscellaneous/skiplink';
 import { Navbar } from '@/components/layout/header/navbar';
 import { Footer } from '@/components/layout/footer';
 import AnalyticsWrapper from '@/components/miscellaneous/analytics';
-import Providers from '@/hooks/useProvider';
+import NextThemeProvider from '@/hooks/useThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-})
+});
 
 export const metadata = {
   title: 'Carol Santos',
@@ -24,8 +24,8 @@ export const metadata = {
   creator: 'Carol Andrade',
   publisher: 'Carol Andrade',
   icons: {
-      shortcut: '/favicon.ico',
-    },
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: 'Carol Andrade | Portfolio',
     description: 'Portfolio',
@@ -50,26 +50,29 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className}`} suppressHydrationWarning>
-      <body className="text-black dark:bg-zinc-900 antialiased m-auto max-w-7xl p-6 flex flex-col height">
-        <Providers>
+    <html lang='en' className={`${inter.className}`} suppressHydrationWarning>
+      <body className='text-black dark:bg-zinc-900 antialiased m-auto max-w-7xl p-6 flex flex-col height'>
+        <NextThemeProvider>
           <SkipLink />
           <Navbar />
-          <main id="main" className="flex-auto m-auto md:flex flex-col md:px-0 max-w-3xl w-full">
+          <main
+            id='main'
+            className='flex-auto m-auto md:flex flex-col md:px-0 max-w-3xl w-full'
+          >
             {children}
             <AnalyticsWrapper />
           </main>
           <Footer />
-        </Providers>
+        </NextThemeProvider>
       </body>
     </html>
-  )
+  );
 }
