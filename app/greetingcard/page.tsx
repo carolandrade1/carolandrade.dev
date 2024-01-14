@@ -21,7 +21,7 @@ export default async function Card() {
         <Image
           priority
           src='/profilePhoto.jpeg'
-          alt='text'
+          alt='Picture of Carol Santos'
           width={100}
           height={100}
           className='rounded-lg w-[80px] h-[80px] md:w-[100px] md:h-[100px]'
