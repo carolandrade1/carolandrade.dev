@@ -1,15 +1,25 @@
 import Image from 'next/image';
-import { DescriptionIcon, MessageIcon } from '@/lib/icons';
+import { BubbleTalkIcon, DescriptionIcon, MessageIcon } from '@/lib/icons';
 import { ButtonBg } from '@/components/miscellaneous/buttonBg';
+import AnimatedTextTyping from '@/components/miscellaneous/animatedTextTyping';
 import { ButtonColor, Contacts, Introduction } from '@/types/types';
-import Sparkles from '@/components/miscellaneous/animatedSparkles';
 
 export function IntroductionSection({ data }: any) {
   const introductionSection: Introduction = data.introductionSection;
 
   return (
     <section className='mb-16 md:mb-28'>
-      <div className='mb-2 md:mb-5'>
+      <div className='mb-2 md:mb-5 w-fit relative'>
+        <div className='absolute -right-16 -top-14 w-24 h-20'>
+          <div className='relative w-24 h-20'>
+            <BubbleTalkIcon addClassName='dark:text-white' />
+            <AnimatedTextTyping
+              delay={1}
+              addStyle='absolute top-2 left-8'
+              textColor='text-black dark:text-white'
+            />
+          </div>
+        </div>
         <Image
           priority
           src={data.photoUrl}
@@ -21,11 +31,9 @@ export function IntroductionSection({ data }: any) {
       </div>
       <div>
         <div className='mb-6 md:mb-10'>
-          <Sparkles>
-            <h1 className='leading-8 text-3xl md:text-5xl font-bold dark:text-white'>
-              {introductionSection.h1}
-            </h1>
-          </Sparkles>
+          <h1 className='leading-8 text-3xl md:text-5xl font-bold dark:text-white'>
+            {introductionSection.h1}
+          </h1>
           <h2 className='text-lg dark:text-gray-300'>
             {introductionSection.role}
           </h2>
