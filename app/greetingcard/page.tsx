@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default async function Card() {
   return (
-    <section className='w-full max-w-sm mx-auto p-16 pt-24 bg-white border-gray-100 dark:bg-gray-100 dark:border-gray-700 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(213,202,255,0.15)] rounded-lg relative'>
+    <section className='w-full max-w-sm mx-auto p-16 pt-24 bg-white border-gray-100 dark:bg-gray-100 dark:border-gray-700 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(213,202,255,0.15)] rounded-lg relative transform -translate-y-20'>
       <div className='mb-2 md:mb-5 w-fit relative'>
         <div className='absolute -right-16 -top-14 w-24 h-20'>
           <div className='relative w-24 h-20'>
