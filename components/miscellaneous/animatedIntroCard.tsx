@@ -22,7 +22,7 @@ export default function AnimatedIntroCard() {
         </div>
         <AnimatedTextContainer
           text={['NICE', 'TO', 'MEET', 'YOU']}
-          className={'text-7xl text-center font-black drop-shadow-lg'}
+          className={'text-6xl text-center font-black drop-shadow-lg'}
         />
       </div>
     </AnimatedDuration>
