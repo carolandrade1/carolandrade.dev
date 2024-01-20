@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.2",
-    "@vercel/analytics": "^1.0.1",
+    "@vercel/analytics": "^1.1.1",
     "clsx": "^2.1.0",
     "framer-motion": "^10.17.9",
     "next": "^14.0.4",
