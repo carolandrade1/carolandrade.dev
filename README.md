@@ -11,10 +11,10 @@
 This portfolio is using the beta version of Next.js 13, so there are some things that I still need to learn or some tools that they haven't launched yet.
 
 - [ ] Global `404` page
-- [ ] Use a database instead of the info file that I have
-- [ ] Study more about typescript
-- [ ] Create more animations and search about accessibility
-- [ ] Add article section with references
+- [X] Use a database instead of the info file that I have
+- [X] Study more about typescript
+- [X] Create more animations and search about accessibility
+- [X] Add article section with references
 - [ ] Create a guestbook
 
 ## Old portfolio
