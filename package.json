@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.2",
+    "@supabase/supabase-js": "^2.47.10",
     "@vercel/analytics": "^1.4.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.12.0",
