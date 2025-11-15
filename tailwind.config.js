@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}", // Note the addition of the `app` directory.
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./types/**/*.{js,ts,jsx,tsx}",
@@ -10,12 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['var(--font-ibarra']
+        serif: ['var(--font-ibarra)'],
       },
     },
   },
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
-  plugins: [],
-}
+};
+
