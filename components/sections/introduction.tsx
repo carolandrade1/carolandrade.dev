@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { BubbleTalkIcon, DescriptionIcon, MessageIcon } from '@/lib/icons';
 import { ButtonBg } from '@/components/miscellaneous/buttonBg';
-import AnimatedTextTyping from '@/components/miscellaneous/animatedTextTyping';
 import { ButtonColor, Contacts, Introduction } from '@/types/types';
 
 export function IntroductionSection({ data }: any) {
@@ -10,16 +9,6 @@ export function IntroductionSection({ data }: any) {
   return (
     <section className='mb-16 md:mb-28'>
       <div className='mb-2 md:mb-5 w-fit relative'>
-        <div className='absolute -right-16 -top-14 w-24 h-20'>
-          <div className='relative w-24 h-20'>
-            <BubbleTalkIcon addClassName='dark:text-white' />
-            <AnimatedTextTyping
-              delay={1}
-              addStyle='absolute top-2 left-8'
-              textColor='text-black dark:text-white'
-            />
-          </div>
-        </div>
         <Image
           priority
           src={data.photoUrl}
