@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const transition = {
   type: 'spring',
@@ -29,7 +29,7 @@ export const MoonIcon = () => {
         initial='initial'
         animate='animate'
         whileTap='whileTap'
-        variants={variants}
+        variants={variants as Variants}
       />
     </motion.svg>
   );
@@ -68,9 +68,9 @@ export const SunIcon = () => {
         fill='currentColor'
         initial='initial'
         animate='animate'
-        variants={coreVariants}
+        variants={coreVariants as Variants}
       />
-      <motion.g initial='initial' animate='animate' variants={raysVariants}>
+      <motion.g initial='initial' animate='animate' variants={raysVariants as Variants}>
         <circle
           cx='3.08982'
           cy='6.85502'
